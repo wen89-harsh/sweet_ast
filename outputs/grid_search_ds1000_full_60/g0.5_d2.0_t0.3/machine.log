@@ -1,0 +1,62 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Traceback (most recent call last):
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/main.py", line 12, in <module>
+    from lm_eval.evaluator import Evaluator
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator.py", line 8, in <module>
+    from lm_eval import tasks
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/tasks/__init__.py", line 3, in <module>
+    from . import (apps, codexglue_code_to_text, codexglue_text_to_text, conala,
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/tasks/apps.py", line 13, in <module>
+    from evaluate import load
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/evaluate/__init__.py", line 29, in <module>
+    from .evaluation_suite import EvaluationSuite
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/evaluate/evaluation_suite/__init__.py", line 10, in <module>
+    from ..evaluator import evaluator
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/evaluate/evaluator/__init__.py", line 17, in <module>
+    from transformers.pipelines import SUPPORTED_TASKS as SUPPORTED_PIPELINE_TASKS
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/pipelines/__init__.py", line 63, in <module>
+    from .document_question_answering import DocumentQuestionAnsweringPipeline
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/pipelines/document_question_answering.py", line 29, in <module>
+    from .question_answering import select_starts_ends
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/pipelines/question_answering.py", line 9, in <module>
+    from ..data import SquadExample, SquadFeatures, squad_convert_examples_to_features
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/data/__init__.py", line 26, in <module>
+    from .metrics import glue_compute_metrics, xnli_compute_metrics
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/data/metrics/__init__.py", line 19, in <module>
+    from scipy.stats import pearsonr, spearmanr
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/scipy/stats/__init__.py", line 606, in <module>
+    from ._stats_py import *
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/scipy/stats/_stats_py.py", line 38, in <module>
+    from scipy.spatial.distance import cdist
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/scipy/spatial/__init__.py", line 110, in <module>
+    from ._kdtree import *
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/scipy/spatial/_kdtree.py", line 206, in <module>
+    class KDTree(cKDTree):
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/scipy/spatial/_kdtree.py", line 287, in KDTree
+    class node:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/shanjianping/anaconda3/envs/wenv/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1057, in launch_command
+    simple_launcher(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 670, in simple_launcher
+    process.wait()
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 2053, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 2011, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

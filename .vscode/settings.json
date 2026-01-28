@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./AST_anchor",
+        "./AST_anchor"
+    ]
+}

@@ -1,0 +1,10 @@
+accelerate==0.28.0
+transformers==4.38.2
+datasets==2.18.0
+evaluate==0.4.1
+mosestokenizer==1.2.1
+nltk==3.8.1
+cython-npm==0.2.4
+scipy==1.13.0
+scikit-learn==1.5.0
+sentencepiece==0.2.0

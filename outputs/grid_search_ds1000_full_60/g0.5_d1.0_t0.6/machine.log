@@ -1,0 +1,65 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 4.19.91, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py:720: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py:466: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+Selected Task: ds1000-all-completion
+Loading tokenizer and model (in bf16)
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:03<00:22,  3.83s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:07<00:18,  3.78s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:11<00:14,  3.70s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:14<00:10,  3.61s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:17<00:06,  3.50s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:21<00:03,  3.38s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:22<00:00,  2.70s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:22<00:00,  3.20s/it]
+/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/base.py:30: UserWarning: This task will use a locally downloaded dataset, not from the HF hub.
+  warn(
+number of problems for this task is 1000
+Traceback (most recent call last):
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/main.py", line 341, in <module>
+    main()
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/main.py", line 328, in main
+    results[task_name] = evaluator.evaluate(task_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator.py", line 224, in evaluate
+    generations, references = self.generate_text(task_name)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator.py", line 53, in generate_text
+    generations = parallel_generations(
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/generation.py", line 106, in parallel_generations
+    model = model.to(accelerator.device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 2556, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 288.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 221.12 MiB is free. Process 2890470 has 14.47 GiB memory in use. Process 3352710 has 18.35 GiB memory in use. Process 210058 has 24.91 GiB memory in use. Process 629648 has 7.81 GiB memory in use. Process 635516 has 6.56 GiB memory in use. Including non-PyTorch memory, this process has 6.86 GiB memory in use. Of the allocated memory 6.46 GiB is allocated by PyTorch, and 915.50 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/shanjianping/anaconda3/envs/wenv/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1057, in launch_command
+    simple_launcher(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 673, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/shanjianping/anaconda3/envs/wenv/bin/python3.11', 'main.py', '--model', 'bigcode/starcoder', '--use_auth_token', '--task', 'ds1000-all-completion', '--temperature', '0.2', '--precision', 'bf16', '--batch_size', '1', '--allow_code_execution', '--do_sample', '--top_p', '0.5', '--n_samples', '1', '--max_length_generation', '4096', '--save_generations', '--outputs_dir', 'outputs/grid_search_ds1000_full_60/g0.5_d1.0_t0.6/machine', '--sweet', '--gamma', '0.5', '--delta', '1.0', '--entropy_threshold', '0.6']' returned non-zero exit status 1.

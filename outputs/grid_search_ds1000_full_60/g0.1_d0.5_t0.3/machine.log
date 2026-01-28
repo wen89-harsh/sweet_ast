@@ -1,0 +1,113 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 4.19.91, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py:720: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py:466: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+Selected Task: ds1000-all-completion
+Loading tokenizer and model (in bf16)
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:03<00:23,  3.84s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:07<00:18,  3.67s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:10<00:14,  3.52s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:13<00:10,  3.40s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:17<00:06,  3.29s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:20<00:03,  3.21s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:21<00:00,  2.59s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:21<00:00,  3.06s/it]
+/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/base.py:30: UserWarning: This task will use a locally downloaded dataset, not from the HF hub.
+  warn(
+number of problems for this task is 1000
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:02<37:54,  2.28s/it]  0%|          | 2/1000 [00:03<24:44,  1.49s/it]  0%|          | 3/1000 [00:05<32:43,  1.97s/it]  0%|          | 4/1000 [00:06<27:41,  1.67s/it]  0%|          | 5/1000 [00:09<31:00,  1.87s/it]  1%|          | 6/1000 [00:12<40:01,  2.42s/it]  1%|          | 7/1000 [00:15<41:51,  2.53s/it]  1%|          | 8/1000 [00:16<33:56,  2.05s/it]  1%|          | 9/1000 [00:17<28:38,  1.73s/it]  1%|          | 10/1000 [00:18<22:44,  1.38s/it]  1%|          | 11/1000 [00:20<28:08,  1.71s/it]  1%|          | 12/1000 [00:21<22:43,  1.38s/it]  1%|▏         | 13/1000 [00:22<22:10,  1.35s/it]  1%|▏         | 14/1000 [02:06<8:53:28, 32.46s/it]  2%|▏         | 15/1000 [03:51<14:51:24, 54.30s/it]  2%|▏         | 16/1000 [03:57<10:50:15, 39.65s/it]  2%|▏         | 17/1000 [03:58<7:38:17, 27.97s/it]   2%|▏         | 18/1000 [03:58<5:24:24, 19.82s/it]  2%|▏         | 19/1000 [04:00<3:52:08, 14.20s/it]  2%|▏         | 20/1000 [04:01<2:49:11, 10.36s/it]  2%|▏         | 21/1000 [05:44<10:22:47, 38.17s/it]  2%|▏         | 22/1000 [05:45<7:22:41, 27.16s/it]   2%|▏         | 23/1000 [05:47<5:14:37, 19.32s/it]  2%|▏         | 24/1000 [05:47<3:42:57, 13.71s/it]  2%|▎         | 25/1000 [05:48<2:42:07,  9.98s/it]  3%|▎         | 26/1000 [05:53<2:16:42,  8.42s/it]  3%|▎         | 27/1000 [06:03<2:23:13,  8.83s/it]  3%|▎         | 28/1000 [06:10<2:16:25,  8.42s/it]  3%|▎         | 29/1000 [06:17<2:07:59,  7.91s/it]  3%|▎         | 30/1000 [06:18<1:34:33,  5.85s/it]  3%|▎         | 31/1000 [06:19<1:11:22,  4.42s/it]  3%|▎         | 32/1000 [06:20<52:59,  3.28s/it]    3%|▎         | 33/1000 [06:21<41:54,  2.60s/it]  3%|▎         | 34/1000 [06:22<34:15,  2.13s/it]  4%|▎         | 35/1000 [06:23<28:53,  1.80s/it]  4%|▎         | 36/1000 [06:24<26:09,  1.63s/it]  4%|▎         | 37/1000 [06:25<21:40,  1.35s/it]  4%|▍         | 38/1000 [06:26<17:59,  1.12s/it]  4%|▍         | 39/1000 [06:26<16:02,  1.00s/it]  4%|▍         | 40/1000 [06:27<12:42,  1.26it/s]  4%|▍         | 41/1000 [06:27<10:32,  1.52it/s]  4%|▍         | 42/1000 [06:28<10:31,  1.52it/s]  4%|▍         | 43/1000 [06:28<11:17,  1.41it/s]  4%|▍         | 44/1000 [06:29<11:48,  1.35it/s]  4%|▍         | 45/1000 [06:30<13:12,  1.20it/s]  5%|▍         | 46/1000 [06:31<14:11,  1.12it/s]  5%|▍         | 47/1000 [06:32<14:36,  1.09it/s]  5%|▍         | 48/1000 [06:34<17:44,  1.12s/it]  5%|▍         | 49/1000 [06:35<19:25,  1.23s/it]  5%|▌         | 50/1000 [06:38<27:15,  1.72s/it]  5%|▌         | 51/1000 [06:39<23:49,  1.51s/it]  5%|▌         | 52/1000 [06:41<27:12,  1.72s/it]  5%|▌         | 53/1000 [06:42<23:46,  1.51s/it]  5%|▌         | 54/1000 [06:44<23:02,  1.46s/it]  6%|▌         | 55/1000 [06:45<20:38,  1.31s/it]  6%|▌         | 56/1000 [06:45<17:26,  1.11s/it]  6%|▌         | 57/1000 [06:51<37:57,  2.42s/it]  6%|▌         | 58/1000 [06:57<56:42,  3.61s/it]  6%|▌         | 59/1000 [07:02<1:04:02,  4.08s/it]  6%|▌         | 60/1000 [07:04<51:41,  3.30s/it]    6%|▌         | 61/1000 [08:47<8:39:54, 33.22s/it]  6%|▌         | 62/1000 [08:47<6:05:41, 23.39s/it]  6%|▋         | 63/1000 [08:49<4:21:59, 16.78s/it]  6%|▋         | 64/1000 [08:50<3:08:57, 12.11s/it]  6%|▋         | 65/1000 [08:52<2:20:32,  9.02s/it]  7%|▋         | 66/1000 [08:56<1:56:01,  7.45s/it]  7%|▋         | 67/1000 [08:57<1:29:09,  5.73s/it]  7%|▋         | 68/1000 [09:00<1:13:44,  4.75s/it]  7%|▋         | 69/1000 [09:01<56:45,  3.66s/it]    7%|▋         | 70/1000 [09:02<45:02,  2.91s/it]  7%|▋         | 71/1000 [09:04<41:11,  2.66s/it]  7%|▋         | 72/1000 [09:06<38:27,  2.49s/it]  7%|▋         | 73/1000 [09:07<30:19,  1.96s/it]  7%|▋         | 74/1000 [09:15<58:07,  3.77s/it]  8%|▊         | 75/1000 [09:23<1:17:04,  5.00s/it]  8%|▊         | 76/1000 [09:32<1:36:20,  6.26s/it]  8%|▊         | 77/1000 [09:32<1:09:47,  4.54s/it]  8%|▊         | 78/1000 [09:33<51:12,  3.33s/it]    8%|▊         | 79/1000 [09:34<38:20,  2.50s/it]  8%|▊         | 80/1000 [09:34<28:36,  1.87s/it]  8%|▊         | 81/1000 [09:35<23:51,  1.56s/it]  8%|▊         | 82/1000 [09:36<21:38,  1.41s/it]  8%|▊         | 83/1000 [09:36<17:10,  1.12s/it]  8%|▊         | 84/1000 [09:37<14:03,  1.09it/s]  8%|▊         | 85/1000 [09:37<12:43,  1.20it/s]  9%|▊         | 86/1000 [09:40<22:24,  1.47s/it]  9%|▊         | 87/1000 [09:42<23:48,  1.57s/it]  9%|▉         | 88/1000 [09:46<32:45,  2.16s/it]  9%|▉         | 89/1000 [09:49<38:03,  2.51s/it]  9%|▉         | 90/1000 [09:50<31:44,  2.09s/it]  9%|▉         | 91/1000 [09:51<26:35,  1.75s/it]  9%|▉         | 92/1000 [09:52<22:02,  1.46s/it]  9%|▉         | 93/1000 [09:53<18:52,  1.25s/it]  9%|▉         | 94/1000 [10:02<54:04,  3.58s/it] 10%|▉         | 95/1000 [10:04<48:41,  3.23s/it] 10%|▉         | 96/1000 [10:05<38:39,  2.57s/it] 10%|▉         | 97/1000 [10:07<36:41,  2.44s/it] 10%|▉         | 98/1000 [10:08<29:43,  1.98s/it] 10%|▉         | 99/1000 [10:09<24:42,  1.65s/it] 10%|█         | 100/1000 [10:10<23:15,  1.55s/it] 10%|█         | 101/1000 [10:11<18:50,  1.26s/it] 10%|█         | 102/1000 [10:11<15:45,  1.05s/it] 10%|█         | 103/1000 [10:13<16:25,  1.10s/it] 10%|█         | 104/1000 [10:14<18:19,  1.23s/it] 10%|█         | 105/1000 [10:15<17:30,  1.17s/it] 11%|█         | 106/1000 [10:19<28:44,  1.93s/it] 11%|█         | 107/1000 [10:24<41:20,  2.78s/it] 11%|█         | 108/1000 [10:29<52:14,  3.51s/it] 11%|█         | 109/1000 [10:30<40:11,  2.71s/it] 11%|█         | 110/1000 [10:30<31:10,  2.10s/it] 11%|█         | 111/1000 [10:32<30:25,  2.05s/it] 11%|█         | 112/1000 [10:34<29:25,  1.99s/it] 11%|█▏        | 113/1000 [10:35<25:14,  1.71s/it] 11%|█▏        | 114/1000 [10:38<29:21,  1.99s/it] 12%|█▏        | 115/1000 [10:39<26:57,  1.83s/it] 12%|█▏        | 116/1000 [10:42<30:17,  2.06s/it] 12%|█▏        | 117/1000 [10:43<26:49,  1.82s/it] 12%|█▏        | 118/1000 [10:44<20:32,  1.40s/it] 12%|█▏        | 119/1000 [10:44<15:59,  1.09s/it] 12%|█▏        | 120/1000 [10:44<12:56,  1.13it/s] 12%|█▏        | 121/1000 [10:50<33:19,  2.27s/it] 12%|█▏        | 122/1000 [10:53<38:37,  2.64s/it] 12%|█▏        | 123/1000 [10:57<44:42,  3.06s/it] 12%|█▏        | 124/1000 [10:59<38:39,  2.65s/it] 12%|█▎        | 125/1000 [11:01<34:24,  2.36s/it] 13%|█▎        | 126/1000 [11:02<31:25,  2.16s/it] 13%|█▎        | 127/1000 [11:04<29:19,  2.02s/it] 13%|█▎        | 128/1000 [11:06<27:04,  1.86s/it] 13%|█▎        | 129/1000 [11:07<23:45,  1.64s/it] 13%|█▎        | 130/1000 [11:09<24:08,  1.67s/it] 13%|█▎        | 131/1000 [11:10<23:12,  1.60s/it] 13%|█▎        | 132/1000 [11:11<22:32,  1.56s/it] 13%|█▎        | 133/1000 [11:13<23:35,  1.63s/it] 13%|█▎        | 134/1000 [11:15<23:24,  1.62s/it] 14%|█▎        | 135/1000 [11:16<22:49,  1.58s/it] 14%|█▎        | 136/1000 [11:17<19:56,  1.38s/it] 14%|█▎        | 137/1000 [11:18<17:08,  1.19s/it] 14%|█▍        | 138/1000 [11:19<15:24,  1.07s/it] 14%|█▍        | 139/1000 [11:20<14:50,  1.03s/it] 14%|█▍        | 140/1000 [11:20<12:31,  1.14it/s] 14%|█▍        | 141/1000 [11:21<10:54,  1.31it/s] 14%|█▍        | 142/1000 [11:23<16:57,  1.19s/it] 14%|█▍        | 143/1000 [11:24<18:11,  1.27s/it] 14%|█▍        | 144/1000 [11:25<15:30,  1.09s/it] 14%|█▍        | 145/1000 [11:26<13:35,  1.05it/s] 15%|█▍        | 146/1000 [11:26<12:12,  1.17it/s] 15%|█▍        | 147/1000 [11:27<11:18,  1.26it/s] 15%|█▍        | 147/1000 [13:05<1:16:00,  5.35s/it]
+Traceback (most recent call last):
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/main.py", line 341, in <module>
+    main()
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/main.py", line 328, in main
+    results[task_name] = evaluator.evaluate(task_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator.py", line 224, in evaluate
+    generations, references = self.generate_text(task_name)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator.py", line 53, in generate_text
+    generations = parallel_generations(
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/generation.py", line 110, in parallel_generations
+    generations = complete_code(
+                  ^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/utils.py", line 140, in complete_code
+    generated_tokens = model.generate(
+                       ^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/generation/utils.py", line 1592, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/generation/utils.py", line 2696, in sample
+    outputs = self(
+              ^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 1250, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 1103, in forward
+    outputs = block(
+              ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 754, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 664, in forward
+    hidden_states = self.c_fc(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/shanjianping/anaconda3/envs/wenv/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1057, in launch_command
+    simple_launcher(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 670, in simple_launcher
+    process.wait()
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 2053, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/subprocess.py", line 2011, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

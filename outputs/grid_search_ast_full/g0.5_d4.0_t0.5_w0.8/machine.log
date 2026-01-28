@@ -1,0 +1,103 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 4.19.91, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py:720: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py:466: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
+  warnings.warn(
+Selected Task: humaneval
+Loading tokenizer and model (in bf16)
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:03<00:23,  3.87s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:07<00:18,  3.74s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:10<00:13,  3.50s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:14<00:10,  3.50s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:18<00:07,  3.60s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:21<00:03,  3.67s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:23<00:00,  2.97s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:23<00:00,  3.33s/it]
+✓ 使用水印: SWEET+AST锚点
+  - 熵阈值: 0.5
+  - 锚点权重: 0.8
+  - Gamma: 0.5, Delta: 4.0
+
+任务数量: 164
+每个任务采样数: 10
+Batch size: 8
+  0%|          | 0/328 [00:00<?, ?it/s]  0%|          | 1/328 [00:08<45:36,  8.37s/it]  1%|          | 2/328 [00:15<42:05,  7.75s/it]  1%|          | 3/328 [01:10<2:37:24, 29.06s/it]  1%|          | 4/328 [02:03<3:29:29, 38.80s/it]  2%|▏         | 5/328 [03:01<4:06:24, 45.77s/it]  2%|▏         | 6/328 [03:16<3:08:56, 35.21s/it]  2%|▏         | 7/328 [03:25<2:22:09, 26.57s/it]  2%|▏         | 8/328 [04:15<3:02:24, 34.20s/it]  3%|▎         | 9/328 [05:10<3:35:53, 40.61s/it]  3%|▎         | 10/328 [05:31<3:02:53, 34.51s/it]  3%|▎         | 11/328 [05:43<2:26:17, 27.69s/it]  4%|▎         | 12/328 [06:00<2:07:29, 24.21s/it]  4%|▍         | 13/328 [06:09<1:43:56, 19.80s/it]  4%|▍         | 14/328 [06:19<1:27:33, 16.73s/it]  5%|▍         | 15/328 [06:26<1:11:45, 13.75s/it]  5%|▍         | 16/328 [06:35<1:04:36, 12.43s/it]  5%|▌         | 17/328 [06:40<52:10, 10.07s/it]    5%|▌         | 18/328 [06:44<43:37,  8.44s/it]  6%|▌         | 19/328 [06:54<45:36,  8.86s/it]  6%|▌         | 20/328 [07:04<46:32,  9.07s/it]  6%|▋         | 21/328 [07:55<1:50:48, 21.66s/it]  7%|▋         | 22/328 [08:45<2:34:57, 30.38s/it]  7%|▋         | 23/328 [08:59<2:08:28, 25.28s/it]  7%|▋         | 24/328 [09:58<2:59:07, 35.35s/it]  8%|▊         | 25/328 [10:54<3:30:49, 41.75s/it]  8%|▊         | 26/328 [11:51<3:52:26, 46.18s/it]  8%|▊         | 27/328 [12:04<3:01:45, 36.23s/it]  9%|▊         | 28/328 [12:17<2:26:06, 29.22s/it]  9%|▉         | 29/328 [12:24<1:52:44, 22.62s/it]  9%|▉         | 30/328 [12:29<1:26:46, 17.47s/it]  9%|▉         | 31/328 [12:43<1:21:23, 16.44s/it] 10%|▉         | 32/328 [13:24<1:56:48, 23.68s/it] 10%|█         | 33/328 [13:32<1:32:57, 18.91s/it] 10%|█         | 34/328 [13:39<1:15:13, 15.35s/it] 11%|█         | 35/328 [14:28<2:04:05, 25.41s/it] 11%|█         | 36/328 [14:47<1:55:19, 23.70s/it] 11%|█▏        | 37/328 [15:45<2:44:51, 33.99s/it] 12%|█▏        | 38/328 [16:43<3:18:54, 41.15s/it] 12%|█▏        | 39/328 [17:39<3:38:51, 45.44s/it] 12%|█▏        | 40/328 [18:34<3:52:20, 48.40s/it] 12%|█▎        | 41/328 [19:22<3:50:43, 48.23s/it] 13%|█▎        | 42/328 [19:37<3:02:42, 38.33s/it] 13%|█▎        | 43/328 [20:29<3:21:42, 42.46s/it] 13%|█▎        | 44/328 [20:41<2:37:06, 33.19s/it] 14%|█▎        | 45/328 [20:46<1:56:55, 24.79s/it] 14%|█▍        | 46/328 [20:51<1:28:42, 18.87s/it] 14%|█▍        | 47/328 [21:00<1:14:35, 15.93s/it] 15%|█▍        | 48/328 [21:03<56:44, 12.16s/it]   15%|█▍        | 49/328 [21:14<54:03, 11.63s/it] 15%|█▌        | 50/328 [21:20<46:42, 10.08s/it] 16%|█▌        | 51/328 [22:13<1:45:01, 22.75s/it] 16%|█▌        | 52/328 [22:26<1:32:18, 20.07s/it] 16%|█▌        | 53/328 [22:34<1:15:05, 16.38s/it] 16%|█▋        | 54/328 [22:41<1:02:21, 13.66s/it] 17%|█▋        | 55/328 [22:51<56:03, 12.32s/it]   17%|█▋        | 56/328 [23:00<51:24, 11.34s/it] 17%|█▋        | 57/328 [23:06<44:46,  9.91s/it] 18%|█▊        | 58/328 [23:08<33:21,  7.41s/it] 18%|█▊        | 59/328 [23:16<34:47,  7.76s/it] 18%|█▊        | 60/328 [24:13<1:40:25, 22.49s/it] 19%|█▊        | 61/328 [24:16<1:13:50, 16.59s/it] 19%|█▉        | 62/328 [24:19<55:49, 12.59s/it]   19%|█▉        | 63/328 [25:15<1:52:30, 25.47s/it] 20%|█▉        | 64/328 [26:11<2:32:07, 34.57s/it] 20%|█▉        | 64/328 [26:11<1:48:04, 24.56s/it]
+Traceback (most recent call last):
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/AST_anchor/main_ast.py", line 364, in <module>
+    main()
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/AST_anchor/main_ast.py", line 351, in main
+    results[task_name] = evaluator.evaluate(task_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator_ast.py", line 242, in evaluate
+    generations, references = self.generate_text(task_name)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/evaluator_ast.py", line 66, in generate_text
+    generations = parallel_generations_with_ast(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/generation_with_ast.py", line 163, in parallel_generations_with_ast
+    generations = complete_code(
+                  ^^^^^^^^^^^^^^
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/lm_eval/utils.py", line 140, in complete_code
+    generated_tokens = model.generate(
+                       ^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/generation/utils.py", line 1592, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/generation/utils.py", line 2696, in sample
+    outputs = self(
+              ^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 1250, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 1103, in forward
+    outputs = block(
+              ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 717, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 629, in forward
+    attn_output, attn_weights = self._attn(query, key, value, attention_mask, head_mask)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/transformers/models/gpt_bigcode/modeling_gpt_bigcode.py", line 561, in _attn
+    sdpa_result = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 28.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 18.25 MiB is free. Process 108314 has 24.91 GiB memory in use. Process 158447 has 19.94 GiB memory in use. Including non-PyTorch memory, this process has 31.36 GiB memory in use. Process 3545637 has 2.98 GiB memory in use. Of the allocated memory 30.26 GiB is allocated by PyTorch, and 617.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/shanjianping/anaconda3/envs/wenv/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1057, in launch_command
+    simple_launcher(args)
+  File "/home/shanjianping/anaconda3/envs/wenv/lib/python3.11/site-packages/accelerate/commands/launch.py", line 673, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/shanjianping/anaconda3/envs/wenv/bin/python3.11', 'AST_anchor/main_ast.py', '--model', 'bigcode/starcoder', '--use_auth_token', '--task', 'humaneval', '--temperature', '0.2', '--precision', 'bf16', '--batch_size', '8', '--allow_code_execution', '--do_sample', '--top_p', '0.95', '--n_samples', '10', '--max_length_generation', '512', '--save_generations', '--outputs_dir', 'outputs/grid_search_ast_full/g0.5_d4.0_t0.5_w0.8/machine', '--sweet_ast', '--gamma', '0.5', '--delta', '4.0', '--entropy_threshold', '0.5', '--anchor_weight', '0.8']' returned non-zero exit status 1.

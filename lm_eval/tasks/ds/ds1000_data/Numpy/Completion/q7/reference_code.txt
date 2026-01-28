@@ -1,0 +1,3 @@
+vals, idx = np.unique(a, return_index=True)
+b = np.zeros((a.size, vals.size))
+b[idx, np.arange(a.size)] = 1

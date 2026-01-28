@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/shanjianping/wjy/wenjinyan_place/sweet-watermark-master/calculate_auroc_tpr.py", line 9, in <module>
+    from transformers import HfArgumentParser
+ModuleNotFoundError: No module named 'transformers'
